@@ -1,0 +1,39 @@
+{
+  "name": "cdk",
+  "version": "1.0.0",
+  "private": true,
+  "type":"module",
+  "scripts": {
+    "cdk:bootstrap": "cdk bootstrap --profile default",
+    "cdk:deploy": "cdk deploy --profile default",
+    "cdk:invalidate": "aws cloudfront create-invalidation --distribution-id JSCC-Distribution --paths '/*'"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.106.1"
+  },
+  "devDependencies": {
+    "@aws-cdk/aws-cloudfront": "^1.204.0",
+    "@aws-cdk/aws-iam": "^1.204.0",
+    "@aws-cdk/aws-s3": "^1.204.0",
+    "@aws-cdk/aws-s3-deployment": "^1.204.0",
+    "@aws-cdk/core": "^1.204.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
+    "@vitejs/plugin-react": "^1.3.2",
+    "@vitest/ui": "^0.18.0",
+    "aws-cdk": "^2.106.1",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "typescript": "^4.9.5",
+    "vite": "^2.9.13",
+    "vitest": "^0.17.1"
+  },
+  "msw": {
+    "workerDirectory": "public"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
