@@ -5,8 +5,7 @@
   "type":"module",
   "scripts": {
     "cdk:bootstrap": "cdk bootstrap --profile default",
-    "cdk:deploy": "cdk deploy --profile default",
-    "cdk:invalidate": "aws cloudfront create-invalidation --distribution-id JSCC-Distribution --paths '/*'"
+    "cdk:deploy": "cdk deploy --profile default"
   },
   "dependencies": {
     "aws-cdk-lib": "^2.106.1"
