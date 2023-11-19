@@ -49,7 +49,7 @@ export class CdkS3CloudFront extends Stack {
     );
 
     new s3deploy.BucketDeployment(this, "JSCC-Bucket", {
-      sources: [s3deploy.Source.asset("../dist")],
+      sources: [s3deploy.Source.asset("./dist")],
       destinationBucket: siteBucket,
       distribution,
       distributionPaths: ["/*"],
