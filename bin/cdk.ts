@@ -14,7 +14,7 @@ export class CdkS3CloudFront extends Stack {
     const cloudFrontOAI = new cloudfront.OriginAccessIdentity(this, "JSCC-OAI");
 
     const siteBucket = new s3.Bucket(this, "JSCCStaticBucket", {
-      bucketName: "task2-automatically-deployment",
+      bucketName: "task3",
       websiteIndexDocument: "index.html",
       publicReadAccess: true,
       blockPublicAccess: s3.BlockPublicAccess.BLOCK_ACLS,
