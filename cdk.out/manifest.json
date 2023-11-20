@@ -1,28 +1,28 @@
 {
   "version": "35.0.0",
   "artifacts": {
-    "CdkS3CloudFront.assets": {
+    "S3ReactStack.assets": {
       "type": "cdk:asset-manifest",
       "properties": {
-        "file": "CdkS3CloudFront.assets.json",
+        "file": "S3ReactStack.assets.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
       }
     },
-    "CdkS3CloudFront": {
+    "S3ReactStack": {
       "type": "aws:cloudformation:stack",
       "environment": "aws://unknown-account/unknown-region",
       "properties": {
-        "templateFile": "CdkS3CloudFront.template.json",
+        "templateFile": "S3ReactStack.template.json",
         "terminationProtection": false,
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/ae42f5d08fa3034db5860d2373fde84b5a0406769aa5cbb584ff26fc7e757c1b.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/60d6da67f9ed088898e37808a59625725bef1e0b4b15d9eed3b6493921b96e57.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
-          "CdkS3CloudFront.assets"
+          "S3ReactStack.assets"
         ],
         "lookupRole": {
           "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
@@ -31,89 +31,107 @@
         }
       },
       "dependencies": [
-        "CdkS3CloudFront.assets"
+        "S3ReactStack.assets"
       ],
       "metadata": {
-        "/CdkS3CloudFront/JSCC-OAI/Resource": [
+        "/S3ReactStack/S3-React-OAI/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "JSCCOAI369D710B"
+            "data": "S3ReactOAI22F04DC5"
           }
         ],
-        "/CdkS3CloudFront/JSCCStaticBucket/Resource": [
+        "/S3ReactStack/S3ReactBucket/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "JSCCStaticBucket131261F3"
+            "data": "S3ReactBucketCF25D3C1"
           }
         ],
-        "/CdkS3CloudFront/JSCCStaticBucket/Policy/Resource": [
+        "/S3ReactStack/S3ReactBucket/Policy/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "JSCCStaticBucketPolicyD6904CFA"
+            "data": "S3ReactBucketPolicyEA493A80"
           }
         ],
-        "/CdkS3CloudFront/JSCC-Distribution/CFDistribution": [
+        "/S3ReactStack/S3ReactBucket/AutoDeleteObjectsCustomResource/Default": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "JSCCDistributionCFDistributionDE73347C"
+            "data": "S3ReactBucketAutoDeleteObjectsCustomResourceCA24B191"
           }
         ],
-        "/CdkS3CloudFront/JSCC-Bucket/AwsCliLayer/Resource": [
+        "/S3ReactStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "JSCCBucketAwsCliLayer3E90C1E5"
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
           }
         ],
-        "/CdkS3CloudFront/JSCC-Bucket/CustomResource/Default": [
+        "/S3ReactStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "JSCCBucketCustomResourceD1E1B3A8"
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
           }
         ],
-        "/CdkS3CloudFront/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource": [
+        "/S3ReactStack/clFr-distribution/CFDistribution": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "clFrdistributionCFDistributionAA388CD3"
+          }
+        ],
+        "/S3ReactStack/clFrDeploymebt/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "clFrDeploymebtAwsCliLayer61FA4A50"
+          }
+        ],
+        "/S3ReactStack/clFrDeploymebt/CustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "clFrDeploymebtCustomResource9433199C"
+          }
+        ],
+        "/S3ReactStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
           }
         ],
-        "/CdkS3CloudFront/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource": [
+        "/S3ReactStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF"
           }
         ],
-        "/CdkS3CloudFront/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource": [
+        "/S3ReactStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536"
           }
         ],
-        "/CdkS3CloudFront/CDKMetadata/Default": [
+        "/S3ReactStack/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadata"
           }
         ],
-        "/CdkS3CloudFront/CDKMetadata/Condition": [
+        "/S3ReactStack/CDKMetadata/Condition": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadataAvailable"
           }
         ],
-        "/CdkS3CloudFront/BootstrapVersion": [
+        "/S3ReactStack/BootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "BootstrapVersion"
           }
         ],
-        "/CdkS3CloudFront/CheckBootstrapVersion": [
+        "/S3ReactStack/CheckBootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CheckBootstrapVersion"
           }
         ]
       },
-      "displayName": "CdkS3CloudFront"
+      "displayName": "S3ReactStack"
     },
     "Tree": {
       "type": "cdk:tree",
