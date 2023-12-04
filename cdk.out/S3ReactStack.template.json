@@ -332,7 +332,7 @@
      }
     ],
     "SourceObjectKeys": [
-     "5ff0aad385b42a9ac38e9e0de3d0c7a57d8bf91306736119d17cfaf4736156fa.zip"
+     "a44ee70643a7736bffe7f8c28df713242b40570d11c17f75edbed1bae7991b77.zip"
     ],
     "DestinationBucketName": {
      "Ref": "S3ReactBucketCF25D3C1"
